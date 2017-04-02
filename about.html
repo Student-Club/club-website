@@ -1,0 +1,482 @@
+<!--
+	A Design by ajax gu
+	Author: ajax gu
+	Author URL: gujiuxiang.github.io
+	Reference URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>IGS Student Club Website | Home </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- Add fancyBox main JS and CSS files -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+        <script>
+            $(document).ready(function() {
+            	$('.popup-with-zoom-anim').magnificPopup({
+            		type: 'inline',
+            		fixedContentPos: false,
+            		fixedBgPos: true,
+            		overflowY: 'auto',
+            		closeBtnInside: true,
+            		preloader: false,
+            		midClick: true,
+            		removalDelay: 300,
+            		mainClass: 'my-mfp-zoom-in'
+            });
+            });
+        </script>
+        <style>
+            .video-wrapper {
+            /* Child elements will position themselves relative
+            to the position of this element */
+            position: relative;
+            /*
+            Force the height of the element to be 56.25% of its width, which
+            is equivalent to a 16:9 widescreen display ratio. Any sized video
+            can then be used within the wrapper element and will be displayed
+            at the desired ratio. To calculate this percentage divide height
+            by width and multiply by 100.
+            */
+            padding-bottom: 56.25%;
+            /* Alternatively, for 4:3 standard display ratio, use:
+            padding-bottom: 75%;
+            */
+            /* Account for the height of the player chrome and controls around
+            the video. Can be removed if there is no video chrome. */
+            padding-top: 25px;
+            /* The height is enforced through padding-bottom, above, and the
+            browser box model */
+            height: 0;
+            }
+            .video-wrapper object,
+            .video-wrapper embed,
+            .video-wrapper iframe {
+            /* The embedded media itself should be made to fill the .video-wrapper
+            container. Absolute positioning ensures that the video will sit
+            over the padded area of the surrounding wrapper element. */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo/IGS_Student_Club_Logo.png" alt=""/></a>
+                </div>
+                <div class="cssmenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <!--
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            -->
+                        <li><a href="portfolio.html">Events</a></li>
+                        <li class="active"><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="wrap">
+                <h2>About Us</h2>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="project-wrapper">
+                <div class="wrap">
+                    <div class="section group">
+                        <div class="lsidebar span_1_of_about">
+                            <img src="images/aboutus_igs.jpg" alt=""/>
+                        </div>
+                        <div class="cont span_2_of_about">
+                            <h2>Welcome to IGSSC</h2>
+                            <h3>The IGS Student Club began its activities in January 2013 with a handful of members and has been steadily growing, both in number and activity. The club works around two basic tenets: </h3>
+                            <div class="section group example">
+                                <div class="col_1_of_2 span_1_of_2">
+                                    <p>Promote interdisciplinary knowledge and skill exchange.</p>
+                                </div>
+                                <div class="col_1_of_2 span_1_of_2">
+                                    <p>Build a cohesive culture amongst the IGS student body.</p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!-- <div class="about-middle">
+                        <h4><span>Our Specialty</span></h4>
+                        <p>The Interdisciplinary Graduate School (IGS) focuses on the key research areas within NTU's Peaks of Excellence in Sustainable Earth, New Media and Future Healthcare. Research in these areas span across different disciplines beyond the conventional school-based programmes.</p>
+                    </div> -->
+                    <div class="section group example">
+                        <!-- <div class="col_1_of_2 span_1_of_2">
+                            <div class="skills">
+                                <ul>
+                                    <li>
+                                        <div class="percentage">90%</div>
+                                        <div class="percent-text">COSMIC</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">87%</div>
+                                        <div class="percent-text1">IMI</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">70%</div>
+                                        <div class="percent-text2">LILY</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">75%</div>
+                                        <div class="percent-text3">MAGIC</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">25%</div>
+                                        <div class="percent-text8">ERI@N</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">15%</div>
+                                        <div class="percent-text8">ICRM</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col_1_of_2 span_1_of_2">
+                            <div class="skills">
+                                <ul>
+                                    <li>
+                                        <div class="percentage">80%</div>
+                                        <div class="percent-text4">ROSE</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">76%</div>
+                                        <div class="percent-text5">NITHM</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">65%</div>
+                                        <div class="percent-text6">NNIN</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">85%</div>
+                                        <div class="percent-text7">CI</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">55%</div>
+                                        <div class="percent-text8">NEWRI</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <div class="percentage">80%</div>
+                                        <div class="percent-text3">SCELSE</div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div> -->
+                    </div>
+                    <div class="about-middle">
+                        <h4><span>Our Team</span></h4>
+                        <p>All IGS students are welcome and encouraged to participate in these events to build a strong social and professional network for the duration of our PhD's and beyond.</p>
+                    </div>
+                    <div class="team1">
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <a class="popup-with-zoom-anim" href="#small-dialog1">
+                                <img src="images/IGSSC_member/IGSSC_VIKRAM_SHENOY_HANDIRU.jpg" alt=""/>
+                                <h3>VIKRAM</h3>
+                                <font color="#000000"><center><h6>President</h6></center></font>
+                            </a>
+                            <!-- start magnific -->
+                            <div id="small-dialog1" class="mfp-hide">
+                                <div class="pop_up">
+                                    <h2>about VIKRAM SHENOY HANDIRU</h2>
+                                    <img src="images/IGSSC_member/Personal/ABOUT_VIKRAM_SHENOY_HANDIRU.jpg" alt="ABOUT_VIKRAM_SHENOY_HANDIRU" style='height: 100%; width: 100%; object-fit: contain'/>
+                                    <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                                    <p>
+                                        <p>
+                                              I am a 3rd year Ph.D. researcher from <a href="http://rose.ntu.edu.sg/Pages/Home.aspx"><strong>NITHM</strong></a> who is passionate about working on Brain Computer Interfaces. My research involves signal processing and machine learning algorithms to push the boundaries of the state-of-the-art in decoding the movement imagination. I graduated with a Bachelors in Technology (B.Tech) from National Institute of Technology Karnataka, Surathkal, India. Soon after my B.Tech, I decided to pursue my Ph.D. I have been involved with the IGS student club since 2014 at various positions, currently as the <strong>President</strong>.
+                                        </p>
+                                        <p>
+                                              During my leisure, I love to watch movies, TV Series, playing chess, read about the politics, technology, and sports. I love adventurous sports like skydiving, bungee jumping, skiing, scuba diving and much more. Awaiting to tick off items on my bucket list whenever I get an opportunity.
+                                        </p>
+                                        <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="100%" color=#987cb9 SIZE=1>
+                                        <p>
+                                              Here's my <a href="https://www.researchgate.net/profile/Vikram_Handiru "><strong>Researchgate</strong></a>,
+                                              and contact me: <strong><a href="vikram002@e.ntu.edu.sg">vikram002@e.ntu.edu.sg</a></a> </strong>.</small></br>
+                                        </p>
+                                    </p>
+                                    <div class="social-icons">
+                                        <h2 style="margin-top: 4%;">get in touch</h2>
+                                        <ul>
+                                            <li class="facebook"><a href="https://www.facebook.com/vikkyshenoy"><span> </span></a></li>
+                                            <li class="google"><a href="#"><span> </span></a></li>
+                                            <li class="twitter"><a href="#"><span> </span></a></li>
+                                            <li class="linkedin"><a href="https://www.sg.linkedin.com/in/vikramshenoyhandiru"><span> </span></a></li>
+                                            <li class="youtube"><a href="#"><span> </span></a></li>
+                                            <li class="bloger"><a href="#"><span> </span></a></li>
+                                            <li class="rss"><a href="#"><span> </span></a></li>
+                                            <li class="dribble"><a href="#"><span> </span></a></li>
+                                            <li class="github"><a href="#"><span> </span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <a class="popup-with-zoom-anim" href="#small-dialog2">
+                                <img src="images/IGSSC_member/IGSSC_hongxin.jpg" alt=""/>
+                                <h3>HONGXIN</h3>
+                                <font color="#000000"><center><h6>Vice President</h6></center></font>
+                            </a>
+                            <div id="small-dialog2" class="mfp-hide">
+                                <div class="pop_up">
+                                    <h2>about HONGXIN</h2>
+
+                                    <HR style="border:3 double #987cb9" width="100%" color=#987cb9 SIZE=3>
+                                    <p>
+                                        <p>
+                                              I am a second year Ph.D student from IGS-ERI@N. I obtained my bachelor's degree from school of Electrical and Electronic Engineering of NTU in 2014 and decided to pursue my Ph.D after that. My current research topic is applying deep learning to design ambient and intelligent wireless sensor networks. I have been involved with IGS student club since my first year Ph.D and am currently Vice President of the club.
+                                        </p>
+                                        <p>
+                                              I always play badminton with friends during leisure time. And I am a big fan of Manchester United.
+                                        </p>
+                                        <p>
+                                              hshao002@e.ntu.edu.sg
+                                        </p>
+                                        <HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)" width="100%" color=#987cb9 SIZE=1>
+
+                                    </p>
+                                    <div class="social-icons">
+                                        <h2 style="margin-top: 4%;">get in touch</h2>
+                                        <ul>
+                                            <li class="facebook"><a href="https://www.facebook.com/shao.hongxin"><span> </span></a></li>
+                                            <li class="google"><a href="#"><span> </span></a></li>
+                                            <li class="twitter"><a href="#"><span> </span></a></li>
+                                            <li class="linkedin"><a href="https://www.sg.linkedin.com/in/vikramshenoyhandiru"><span> </span></a></li>
+                                            <li class="youtube"><a href="#"><span> </span></a></li>
+                                            <li class="bloger"><a href="#"><span> </span></a></li>
+                                            <li class="rss"><a href="#"><span> </span></a></li>
+                                            <li class="dribble"><a href="#"><span> </span></a></li>
+                                            <li class="github"><a href="#"><span> </span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_SHEETHAL.jpg" alt=""/>
+                            <h3>SHEETHAL</h3>
+                            <font color="#000000"><center><h6>Secretary</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_WUBINGJIE.jpg" alt=""/>
+                            <h3>BINGJIE</h3>
+                            <font color="#000000"><center><h6>Treasurer</h6></center></font>
+                            <!-- end  magnific -->
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="team2">
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Ashish_Kumar.jpg" alt=""/>
+                            <h3>ASHISH</h3>
+                            <font color="#000000"><center><h6>Events Executive</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Nanjun_Lu.jpg" alt=""/>
+                            <h3>NANJUN</h3>
+                            <font color="#000000"><center><h6>Events Executive</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Abhijit_Vijay_Salvekar.bmp" alt=""/>
+                            <h3>ABHIJITH</h3>
+                            <font color="#000000"><center><h6>Events Executive</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_CUIMINGYUE.jpg" alt=""/>
+                            <h3>MINGYUE</h3>
+                            <font color="#000000"><center><h6>Events Executive</h6></center></font>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="team3">
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Zhang_Xin.jpg" alt=""/>
+                            <h3>ZHANG XIN</h3>
+                            <font color="#000000"><center><h6>Liaison & Logistics</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_Divya_Gunasheelan.jpg" alt=""/>
+                            <h3>DIVYA</h3>
+                            <font color="#000000"><center><h6>Liaison & Logistics</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_GAYATRI.jpg" alt=""/>
+                            <h3>GAYATRI</h3>
+                            <font color="#000000"><center><h6>Publication&Publicity</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_ISHARA.jpg" alt=""/>
+                            <h3>ISHARA</h3>
+                            <font color="#000000"><center><h6>Publication&Publicity</h6></center></font>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="team4">
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Santiago_E_Montesdeoca.jpg" alt=""/>
+                            <h3>SANTIAGO</h3>
+                            <font color="#000000"><center><h6>Publication&Publicity</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Nguyen_Minh_Sang.jpg" alt=""/>
+                            <h3>MINH SANG</h3>
+                            <font color="#000000"><center><h6>Publication&Publicity</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_ROSE_JXGU.jpg" alt=""/>
+                            <h3>JIUXIANG</h3>
+                            <font color="#000000"><center><h6>Publication&Publicity</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_YAO_Shuhan.jpg" alt=""/>
+                            <h3>SHUHAN</h3>
+                            <font color="#000000"><center><h6>Sports</h6></center></font>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="team4">
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGSSC_Nguyen_Duy _am.jpg" alt=""/>
+                            <h3>NGUYEN</h3>
+                            <font color="#000000"><center><h6>Sports</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_ARUNKUMAR.jpg" alt=""/>
+                            <h3>ARUN</h3>
+                            <font color="#000000"><center><h6>Sports</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_ZHANGCHI.jpg" alt=""/>
+                            <h3>ZHANG CHI</h3>
+                            <font color="#000000"><center><h6>Sports</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_AKSHAY.jpg" alt=""/>
+                            <h3>AKSHAY</h3>
+                            <font color="#000000"><center><h6>Sports</h6></center></font>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="team4">
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_BETTY.jpg" alt=""/>
+                            <h3>BETTY</h3>
+                            <font color="#000000"><center><h6>Advisor</h6></center></font>
+                        </div>
+                        <div class="col_1_of_about-grids span_1_of_about-grids">
+                            <img src="images/IGSSC_member/IGS_PRASANNA.jpg" alt=""/>
+                            <h3>PRASANNA</h3>
+                            <font color="#000000"><center><h6>Advisor</h6></center></font>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="wrap">
+                    <div class="section group">
+                        <div class="col_1_of_3 span_1_of_3">
+                            <h3>About Us</h3>
+                            <p>The IGS Student Club began its activities in January 2013 with a handful of members and has been steadily growing, both in number and activity.</p>
+                            <a href="http://igs.ntu.edu.sg/Pages/Home.aspx"><button class="btn1 btn-8 btn-8b">Learn more</button>
+
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <div class="social-icons">
+                                <h4>Social Connecting</h4>
+                                <ul>
+                                  <li class="facebook"><a href="#"><span> </span></a></li>
+                                  <li class="google"><a href="#"><span> </span></a></li>
+                                  <li class="twitter"><a href="#"><span> </span></a></li>
+                                  <!-- <li class="linkedin"><a href="#"><span> </span></a></li> -->
+                                  <li class="youtube"><a href="https://www.youtube.com/channel/UCNLyEzruokTI444ALIESEcg"><span> </span></a></li>
+                                  <!-- <li class="bloger"><a href="#"><span> </span></a></li>
+                                  <li class="rss"><a href="#"><span> </span></a></li>
+                                  <li class="dribble"><a href="#"><span> </span></a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <h3>Contact info</h3>
+                            <div class="footer-list">
+                                <ul>
+                                    <li>
+                                        <img src="images/address.png" alt=""/>
+                                        <p>Interdisciplinary Graduate School,<br>&nbsp;50 Nanyang Avenue, Block S2-B3a-01</p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/phone.png" alt=""/>
+                                        <p>Phone: +65 6592 3077</p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/msg.png" alt=""/>
+                                        <p>Email: <span class="yellow"><a href="#">IGSstudentclub@ntu.edu.sg</a></span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="wrap">
+                    <div class="copy">
+                        <p class="copy">© 2016 <a href="http://www.ntu.edu.sg/Pages/home.aspx" target="_blank"> NANYANG TECHNOLOGICAL UNIVERSITY</a></p>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <!-- <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog.html">Blog</a></li> -->
+                                <li><a href="portfolio.html">Events</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,584 @@
+<!--
+	A Design by ajax gu
+	Author: ajax gu
+	Author URL: gujiuxiang.github.io
+	Reference URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>IGS Student Club Website | Home </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <!-- Add fancyBox main JS and CSS files -->
+        <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+        <script>
+            $(document).ready(function() {
+            	$('.popup-with-zoom-anim').magnificPopup({
+            		type: 'inline',
+            		fixedContentPos: false,
+            		fixedBgPos: true,
+            		overflowY: 'auto',
+            		closeBtnInside: true,
+            		preloader: false,
+            		midClick: true,
+            		removalDelay: 300,
+            		mainClass: 'my-mfp-zoom-in'
+            });
+            });
+        </script>
+        <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+        <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+        <script async src="https://src.litix.io/core/1/mux.js"></script>
+        <script src="//vjs.zencdn.net/5-unsafe/video.js"></script>
+        <script src="https://src.litix.io/videojs/1/videojs-mux.js"></script>
+        <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+        <script src="js/tagcanvas.min.js" type="text/javascript"></script>
+        <script>
+            var o = {
+              textFont: 'Impact,"Arial Black",sans-serif', maxSpeed: 0.01, minSpeed: 0.01,
+              textColour: '#800080', textHeight: 18, outlineMethod: 'colour', fadeIn: 800,
+              outlineColour: '#039', outlineOffset: 0, depth: 0.97, minBrightness: 0.2,
+              wheelZoom: true, reverse: true, shadowBlur: 2, shuffleTags: true,
+              shadowOffset: [1,1], stretchX: 1.7, initial: [0,0.1], clickToFront: 600,
+            };
+            function tcStart() {
+              var s = (new Date).getTime() / 360;
+              o.initial[0] = 0.2 * Math.cos(s);
+              o.initial[1] = 0.2 * Math.sin(s);
+              TagCanvas.Start('exampleCanvas','weightTags',o);
+            }
+            function tcPause() { TagCanvas.Pause('exampleCanvas'); }
+            function tcResume() { TagCanvas.Resume('exampleCanvas'); }
+            function tcReload() { TagCanvas.Reload('exampleCanvas'); }
+            function tcUpdate() { TagCanvas.Update('exampleCanvas'); }
+            function tcFront() { TagCanvas.TagToFront('exampleCanvas', {index: Math.floor(Math.random() * 20), active: 1}); }
+            function tcRotate() {
+                TagCanvas.RotateTag('exampleCanvas', {
+                    index: Math.floor(Math.random() * 20), lat: -60, lng: -60, time: 800, active: 1
+                });
+            }
+            function tcSpeed() {
+                var a = Math.random() * Math.PI * 2, b = 0.1 + Math.random() * 0.9;
+                TagCanvas.SetSpeed('exampleCanvas', [b * Math.sin(a), b * Math.cos(a)]);
+            }
+            window.onload = function() {
+              var counter = 20;
+              TagCanvas.Start('exampleCanvas','extags',o);
+              function modTags() {
+                    var a = document.getElementById('extags').getElementsByTagName('a'), i, r;
+                    for(i = 0; i < 5; ++i) {
+                        r = ~~(Math.random() * 20);
+                        a[r].innerHTML = 'Tag ' + ++counter;
+                    }
+                    setTimeout(modTags, 5000);
+              }
+              setTimeout(modTags, 5000);
+            }
+
+            function resize_canvas(){
+                canvas = document.getElementById("canvas");
+                if (canvas.width  < window.innerWidth)
+                {
+                    canvas.width  = window.innerWidth;
+                }
+
+                if (canvas.height < window.innerHeight)
+                {
+                    canvas.height = window.innerHeight;
+                }
+            }
+        </script>
+        <style>
+            .video-wrapper {
+            /* Child elements will position themselves relative
+            to the position of this element */
+            position: relative;
+            /*
+            Force the height of the element to be 56.25% of its width, which
+            is equivalent to a 16:9 widescreen display ratio. Any sized video
+            can then be used within the wrapper element and will be displayed
+            at the desired ratio. To calculate this percentage divide height
+            by width and multiply by 100.
+            */
+            padding-bottom: 56.25%;
+            /* Alternatively, for 4:3 standard display ratio, use:
+            padding-bottom: 75%;
+            */
+            /* Account for the height of the player chrome and controls around
+            the video. Can be removed if there is no video chrome. */
+            padding-top: 25px;
+            /* The height is enforced through padding-bottom, above, and the
+            browser box model */
+            height: 0;
+            }
+            .video-wrapper object,
+            .video-wrapper embed,
+            .video-wrapper iframe {
+            /* The embedded media itself should be made to fill the .video-wrapper
+            container. Absolute positioning ensures that the video will sit
+            over the padded area of the surrounding wrapper element. */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            }
+            * {
+              padding: 0;
+              margin: 0;
+            }
+            .fit { /* set relative picture size */
+              max-width: 100%;
+              max-height: 100%;
+            }
+            .center {
+              display: block;
+              margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo/IGS_Student_Club_Logo.png" alt="" align="center" /></a>
+                </div>
+                <div class="cssmenu">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <!--
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            -->
+                        <li><a href="portfolio.html">Events</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+
+        <div class="index-banner">
+            <div class="wmuSlider example1">
+                <div class="wmuSliderWrapper">
+                  <article style="position: absolute; width: 100%; opacity: 0;">
+                      <div class="banner-wrap">
+                          <div class="slider-right">
+                              <a href="about.html"><img src="images/IGSSC_member/organize.png" />
+                          </div>
+                          <div class="slider-left">
+                              <h4>Our team</h4>
+                              <p class="middle">2016 Student Leader Committee</p>
+                              <p class="middle">Promote interdisciplinary knowledge and skill exchange</p>
+                              <p class="middle">Build a cohesive culture amongst the IGS student body</p>
+                              <p class="middle">Know more about us</p>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+                  </article>
+                    <article style="position: absolute; width: 100%; opacity: 0;">
+                        <div class="banner-wrap">
+                            <div class="slider-right">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157664802323440"><img src="images/index_bg/team_bounding_160227.png" />
+                            </div>
+                            <div class="slider-left">
+                                <h4>Team Bonding</h4>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157664802323440"><p class="middle">2016-02-27</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157665226927611"><p class="middle">2015-12-08</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157655337322574"><p class="middle">2015-08-04</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157649986845197"><p class="middle">2015-02-10</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                    <article style="position: absolute; width: 100%; opacity: 0;">
+                        <div class="banner-wrap">
+                            <div class="slider-right">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157663426228656"><img src="images/index_bg/IGS_Orientation_4_5January_2016.png" />
+                            </div>
+                            <div class="slider-left">
+                                <h4>IGS Orientation</h4>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157663426228656"><p class="middle">2016-02-12</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157657253153329"><p class="middle">2015-08-03</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157650435036656"><p class="middle">2015-02-07</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157646938438162"><p class="middle">2014-08-05</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157641102069345"><p class="middle">2014-02-10</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157637614223616"><p class="middle">2013-08-05</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                    <article style="position: relative; width: 100%; opacity: 0;">
+                        <div class="banner-wrap">
+                            <div class="slider-left">
+                                <h4>Student Club Retreat</h4>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157655337322574"><p class="middle">2015-12-08</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/sets/72157644703573757"><p class="middle">2014-05-09</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/sets/72157637615361593"><p class="middle">2013-08-31</p>
+                            </div>
+                            <div class="slider-right">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157655337322574"><img src="images/index_bg/Student_Club_Retreat_14112015.png" />
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                    <article style="position: relative; width: 100%; opacity: 0;">
+                        <div class="banner-wrap">
+                            <div class="slider-right">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157665226927611"><img class="center fit" src="images/index_bg/Christmas_151218.png" />
+                            </div>
+                            <div class="slider-left">
+                                <h4>Christmas Celebration</h4>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157661146734544"><p class="middle">2015-12-18</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157650189112405"><p class="middle">2014-12-15</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157639747814606"><p class="middle">2013-12-16</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157632570042705"><p class="middle">2012-12-21</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                    <article style="position: absolute; width: 100%; opacity: 0;">
+                        <div class="banner-wrap">
+                            <div class="slider-left">
+                                <h4>Chinese New Year Celebration</h4>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157665395544125"><p class="middle">2016-02-12</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157651205946906"><p class="middle">2015-02-26</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157641836147284"><p class="middle">2014-02-07</p>
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157632981932012"><p class="middle">2013-02-01</p>
+                            </div>
+                            <div class="slider-right">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157665395544125"><img src="images/index_bg/chinese_new_year20160212.png" />
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                </div>
+                <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
+                <ul class="wmuSliderPagination">
+                    <li><a href="#" class="">0</a></li>
+                    <li><a href="#" class="">1</a></li>
+                    <li><a href="#" class="wmuActive">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </div>
+            <script src="js/jquery.wmuSlider.js"></script>
+            <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+            <script>
+                $('.example1').wmuSlider();
+            </script>
+        </div>
+        <!---//End-da-slider----->
+
+        <div class="main">
+            <div class="content-top">
+                <div class="wrap">
+                    <h3> Recent Activities</h3>
+                    <h5>Let's Get Together and have Fun!</h5>
+                    <div class="section group">
+
+                        <!-- <div class="col_1_of_4 span_1_of_4"> -->
+
+                        <div class="col_1_of_4 span_1_of_first">
+                            <a href="index.html"><img src="images/recent_acitvities/igs-nightcycling.jpg" alt=""/>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_first">
+                            <a href="index.html"><img src="images/recent_acitvities/summer_retreat.jpg" alt=""/>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_first">
+                            <a href="2016_05_movie_night.html"><img src="images/recent_acitvities/igs_movie_night.jpg" alt=""/>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_first">
+                            <a href="2016_03_Sports_team.html"><img src="images/recent_acitvities/poster_cheese.jpg" alt=""/>
+                        </div>
+                        <!-- <div class="col_1_of_4 span_1_of_first">
+                            <a href="2016_03_acrhery.html"><img src="images/recent_acitvities/igs-archery.jpg" alt=""/>
+                        </div> -->
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-middle">
+                <div class="wrap">
+
+                    <h2><span>Student Life</span></h2>
+
+                    <center><div class="video">
+                        <iframe width="49.5%" height="315"  src="https://www.youtube.com/embed/FGim8X-uYO0" frameborder="0" allowfullscreen=""></iframe>
+                        <iframe width="49.5%" height="315" src="https://www.youtube.com/embed/CfkkBhZBoEE"  frameborder="0" allowfullscreen=""></iframe>
+                    </div></center>
+
+                    <p>
+                    <p>
+                    <h2><span>Research specific resources</span></h2>
+                </div>
+
+                <section class="page-content">
+                <div id="container" align="right" >
+                    <div id="main1">
+                        <ul id="tiles">
+                            <li><a href="http://igs.ntu.edu.sg/Pages/Home.aspx"><img src="images/Index_Link_Image/logo_NTu_igs.jpg" width="200" height="60"></li>
+                            <li><a href="http://www.eee.ntu.edu.sg/Pages/home.aspx"><img src="images/Index_Link_Image/logo_NTU3c.jpg" width="200" height="60"></li>
+                            <li><a href="http://www.ntu.edu.sg/Library/Pages/default.aspx"><img src="images/Index_Link_Image/NTULibraries1-2gri6am.jpg" width="200" height="60"></li>
+                            <li><a href="http://clubs.ntu.edu.sg/ntugsc/"><img src="images/Index_Link_Image/ntugsc.png" width="200" height="60"></li>
+                            <li><a href="http://su.ntu.edu.sg/"><img src="images/Index_Link_Image/ntusu.png" width="200" height="60"></li>
+                            <li><a href="https://scholar.google.com.sg/"><img src="images/Index_Link_Image/googlescholar.jpg" width="200" height="60"></li>
+                            <li><a href="https://www.facebook.com/NTUsg/"><img src="images/Index_Link_Image/facebook.png" width="200" height="60"></li>
+                            <li><a href="https://twitter.com/ntusg"><img src="images/Index_Link_Image/twitter.png" width="200" height="60"></li>
+                            <li><a href="https://www.flickr.com/photos/91294949@N02/"><img src="images/Index_Link_Image/yahoo-flickr.jpg" width="200" height="60"></li>
+                            <li><a href="http://rose.ntu.edu.sg"><img src="images/Index_Link_Image/logo-rose.png" width="200" height="60"></li>
+                            <li><a href="http://www.complexity.ntu.edu.sg/Pages/default.aspx"><img src="images/Index_Link_Image/ntu_complexity.png" width="200" height="60"></li>
+                            <li><a href="www.earthobservatory.sg"><img src="images/Index_Link_Image/logo-eos.png" width="200" height="60"></li>
+                            <li><a href="http://erian.ntu.edu.sg"><img src="images/Index_Link_Image/logo-erian.png" width="200" height="60"></li>
+                            <li><a href="http://icrm.ntu.edu.sg/Pages/default.aspx"><img src="images/Index_Link_Image/ICRM_Logo.jpg" width="200" height="60"></li>
+                            <li><a href="http://newri.ntu.edu.sg"><img src="images/Index_Link_Image/NEWRI.png" width="200" height="60"></li>
+                            <li><a href="http://www.scelse.sg"><img src="images/Index_Link_Image/logo-scelse.png" width="200" height="60"></li>
+                            <li><a href="http://imi.ntu.edu.sg"><img src="images/Index_Link_Image/logo-imi.png" width="200" height="60"></li>
+                            <li><a href="http://www.ntulily.org/ "><img src="images/Index_Link_Image/lily_logo.jpg" width="200" height="60"></li>
+                            <li><a href="http://magic.ntu.edu.sg "><img src="images/Index_Link_Image/logo-magic.png" width="200" height="60"></li>
+                            <li><a href="http://nithm.ntu.edu.sg "><img src="images/Index_Link_Image/nithm.png" width="200" height="60"></li>
+                            <li><a href="http://nnin.ntu.edu.sg/Pages/Home.aspx "><img src="images/Index_Link_Image/NNIN Logo_small.jpg" width="200" height="60"></li>
+
+                        </ul>
+                    </div>
+                </div>
+                </section>
+
+                <section class="page-content">
+
+                               <!-- .container start -->
+                               <div class="container">
+                                   <!-- .row start -->
+                                   <div class="row">
+                                       <article class="grid_12">
+                                           <div class="triggerAnimation animated" data-animate='fadeInUp'>
+                                               <ul class="social-links presentation">
+                                                   <li><a href='#' class='pixons-twitter-1'></a></li>
+                                                   <li><a href='#' class='pixons-xing'></a></li>
+                                               </ul><!-- .social-links end -->
+                                           </div><!-- .triggerAnimation animated end -->
+                                       </article><!-- .grid_12 end -->
+                                   </div><!-- .row end -->
+                               </div><!-- .container end -->
+                           </section><!-- .page-content end -->
+
+
+                <!-- <div id=content align="center" >
+                    <canvas id="exampleCanvas" style="width: 30%; height: 100%;">
+                    	<p>Example canvas</p>
+                    </canvas>
+
+                    <br />
+                    <div style="display: none" id="extags">
+                        <a href="https://scholar.google.com.sg/">Google Scholar</a>
+                        <a href="http://admissions.ntu.edu.sg/graduate/R-Programs/R-WhenYouApply/Pages/R-HowtoApply.aspx">Apply to NTU</a>
+                        <a href="http://igs.ntu.edu.sg/Pages/Home.aspx">IGS</a>
+                        <a href="http://maps.ntu.edu.sg/maps">NTU Campus Map</a>
+                        <a href="http://github.com">Github</a>
+                        <a href="http://www.ntu.edu.sg/Library/Pages/default.aspx">NTU Library</a>
+                        <a href="http://arxiv.org/">arxiv</a>
+                        <a href="http://ezlibproxy1.ntu.edu.sg/login?url=http://exampapers.ntu.edu.sg">Examination Papers</a>
+                        <a href="http://igs.ntu.edu.sg/Programmes/Prospective%20Students/Pages/Admission-Procedures.aspx">Apply to IGS</a>
+                        <a href="http://www.ntu.edu.sg/Students/Graduate/StudentServices/HealthAndCounselling/Pages/MedicalCentres.aspx">Medical Centres</a>
+                        <a href="http://ocw.mit.edu/index.htm">OpenCourseWare</a>
+                        <a href="https://www.coursera.org/">Coursera</a>
+                        <a href="https://intu.ntu.edu.sg/_forms/default.aspx?ReturnUrl=/_layouts/Authenticate.aspx?Source=%2F&Source=/&">iNTU</a>
+                        <a href="http://linux.die.net/man/">Linux command</a>
+                        <a href="http://cs224d.stanford.edu/">Deep Learning for NLP</a>
+                        <a href="http://deeplearning.net/">Deep Learning</a>
+                        <a href="http://rose.ntu.edu.sg/Pages/Home.aspx">ROSE@NTU</a>
+                        <a href="http://erian.ntu.edu.sg/Pages/Home.aspx">ERI@NTU</a>
+                        <a href="http://newri.ntu.edu.sg">NEWRI@NTU</a>
+                        <a href="http://www.earthobservatory.sg">EOS</a>
+                        <a href="http://www.scelse.sg">SCELSE</a>
+                        <a href="http://cosmic.ntu.edu.sg">COSMIC@NTU</a>
+                        <a href="http://imi.ntu.edu.sg">IMI@NTU</a>
+                        <a href="http://www.ntulily.org/">LILY@NTU</a>
+                        <a href="http://magic.ntu.edu.sg">MAGIC@NTU</a>
+                    </div>
+
+                </div> -->
+
+                <link rel="stylesheet" href="css/colorbox.css">
+                <!-- Include the imagesLoaded plug-in -->
+                <script src="js/jquery.imagesloaded.js"></script>
+                <!-- include colorbox -->
+                <script src="js/jquery.colorbox-min.js"></script>
+                <!-- Include the plug-in -->
+                <script src="js/jquery.wookmark.js"></script>
+                <!-- Once the page is loaded, initalize the plug-in. -->
+                <script type="text/javascript">
+                    (function ($){
+                      $('#tiles').imagesLoaded(function() {
+                        // Prepare layout options.
+                        var options = {
+                          autoResize: true, // This will auto-update the layout when the browser window is resized.
+                          container: $('#main1'), // Optional, used for some extra CSS styling
+                          offset: 2, // Optional, the distance between grid items
+                          itemWidth:200 // Optional, the width of a grid item
+                        };
+
+                        // Get a reference to your grid items.
+                        var handler = $('#tiles li');
+
+                        // Call the layout function.
+                        handler.wookmark(options);
+
+                        // Init lightbox
+                        $('a', handler).colorbox({
+                          rel: 'lightbox'
+                        });
+                      });
+                    })(jQuery);
+                </script>
+            </div>
+            <div class="content-bottom">
+                <!-- <h2><span>Our Clients</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+                    <ul id="flexiselDemo3">
+                    	<li><img src="images/client1.jpg" /></li>
+                    	<li><img src="images/client2.jpg" /></li>
+                    	<li><img src="images/client3.jpg" /></li>
+                    	<li><img src="images/client4.jpg" /></li>
+                    	<li><img src="images/client5.jpg" /></li>
+                    	<li><img src="images/client6.jpg" /></li>
+                    	<li><img src="images/client7.jpg" /></li>
+                    	<li><img src="images/client8.jpg" /></li>
+                    </ul> -->
+                <script type="text/javascript">
+                    $(window).load(function() {
+                    	$("#flexiselDemo1").flexisel();
+                    	$("#flexiselDemo2").flexisel({
+                    		enableResponsiveBreakpoints: true,
+                        	responsiveBreakpoints: {
+                        		portrait: {
+                        			changePoint:480,
+                        			visibleItems: 1
+                        		},
+                        		landscape: {
+                        			changePoint:640,
+                        			visibleItems: 2
+                        		},
+                        		tablet: {
+                        			changePoint:768,
+                        			visibleItems: 3
+                        		}
+                        	}
+                        });
+
+                    	$("#flexiselDemo3").flexisel({
+                    		visibleItems: 5,
+                    		animationSpeed: 1000,
+                    		autoPlay: true,
+                    		autoPlaySpeed: 3000,
+                    		pauseOnHover: true,
+                    		enableResponsiveBreakpoints: true,
+                        	responsiveBreakpoints: {
+                        		portrait: {
+                        			changePoint:480,
+                        			visibleItems: 1
+                        		},
+                        		landscape: {
+                        			changePoint:640,
+                        			visibleItems: 2
+                        		},
+                        		tablet: {
+                        			changePoint:768,
+                        			visibleItems: 3
+                        		}
+                        	}
+                        });
+
+                    });
+                </script>
+                <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="wrap">
+                    <div class="section group">
+                        <div class="col_1_of_3 span_1_of_3">
+                            <h3>About Us</h3>
+                            <p>The IGS Student Club began its activities in January 2013 with a handful of members and has been steadily growing, both in number and activity.</p>
+                            <a href="http://igs.ntu.edu.sg/Pages/Home.aspx"><button class="btn1 btn-8 btn-8b">Learn more</button>
+
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <div class="social-icons">
+                                <h4>Social Connecting</h4>
+                                <ul>
+                                    <li class="facebook"><a href="#"><span> </span></a></li>
+                                    <li class="google"><a href="#"><span> </span></a></li>
+                                    <li class="twitter"><a href="#"><span> </span></a></li>
+                                    <!-- <li class="linkedin"><a href="#"><span> </span></a></li> -->
+                                    <li class="youtube"><a href="https://www.youtube.com/channel/UCNLyEzruokTI444ALIESEcg"><span> </span></a></li>
+                                    <!-- <li class="bloger"><a href="#"><span> </span></a></li>
+                                    <li class="rss"><a href="#"><span> </span></a></li>
+                                    <li class="dribble"><a href="#"><span> </span></a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <h3>Contact info</h3>
+                            <div class="footer-list">
+                                <ul>
+                                    <li>
+                                        <img src="images/address.png" alt=""/>
+                                        <p>Interdisciplinary Graduate School,<br>&nbsp;50 Nanyang Avenue, Block S2-B3a-01</p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/phone.png" alt=""/>
+                                        <p>Phone: +65 6592 3077</p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/msg.png" alt=""/>
+                                        <p>Email: <span class="yellow"><a href="#">IGSstudentclub@ntu.edu.sg</a></span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="wrap">
+                    <div class="copy">
+                        <p class="copy">© 2016 <a href="http://www.ntu.edu.sg/Pages/home.aspx" target="_blank"> NANYANG TECHNOLOGICAL UNIVERSITY</a></p>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <!-- <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="blog.html">Blog</a></li> -->
+                            <li><a href="portfolio.html">Events</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

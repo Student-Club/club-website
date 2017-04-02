@@ -1,0 +1,524 @@
+<!--A Design by ajax gu
+    Author: ajax gu
+    Author URL: gujiuxiang.github.io
+    Reference URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
+    -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>IGS Student Club Website | Home </title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+
+            	var filterList = {
+
+            		init: function () {
+
+            			// MixItUp plugin
+            			// http://mixitup.io
+            			$('#portfoliolist').mixitup({
+            				targetSelector: '.portfolio',
+            				filterSelector: '.filter',
+            				effects: ['fade'],
+            				easing: 'snap',
+            				// call the hover effect
+            				onMixEnd: filterList.hoverEffect()
+            			});
+
+            		},
+
+            		hoverEffect: function () {
+
+            			// Simple parallax effect
+            			$('#portfoliolist .portfolio').hover(
+            				function () {
+            					$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+            					$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+            				},
+            				function () {
+            					$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+            					$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+            				}
+            			);
+
+            		}
+
+            	};
+
+            	// Run the show!
+            	filterList.init();
+
+
+            });
+        </script>
+        <!-- Add fancyBox main JS and CSS files -->
+        <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+        <script>
+            $(document).ready(function() {
+            	$('.popup-with-zoom-anim').magnificPopup({
+            		type: 'inline',
+            		fixedContentPos: false,
+            		fixedBgPos: true,
+            		overflowY: 'auto',
+            		closeBtnInside: true,
+            		preloader: false,
+            		midClick: true,
+            		removalDelay: 300,
+            		mainClass: 'my-mfp-zoom-in'
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo/IGS_Student_Club_Logo.png" alt=""/></a>
+                </div>
+                <div class="cssmenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="portfolio.html">Events</a></li>
+                        <!--
+                            <li><a href="blog.html">Blog</a></li>
+                            -->
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="wrap">
+                <h2>Events</h2>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="portfolio-top">
+                <div class="wrap">
+                    <h3>Previous Activities </h3>
+                    <h5>We are ready and waiting for you to join us at IGSSC!</h5>
+                </div>
+            </div>
+            <div class="container">
+                <ul id="filters" class="clearfix">
+                    <li><span class="filter active" data-filter="app card icon logo web">All</span></li>
+                    <li><span class="filter" data-filter="app">Team Bonding</span></li>
+                    <li><span class="filter" data-filter="card">Orientation</span></li>
+                    <li><span class="filter" data-filter="icon">Workshop</span></li>
+                    <li><span class="filter" data-filter="logo">Lecture</span></li>
+                    <li><span class="filter" data-filter="web">Other</span></li>
+                </ul>
+                <div class="clear"></div>
+                <div id="portfoliolist" style="     " class="">
+                    <div class="wrapper">
+                        <div class="portfolio logo1 mix_all" data-cat="logo" style=" ">
+                            <div class="portfolio-wrapper">
+                                <a href="20160802.html">
+                                <img src="images/IGS_EVENTS/IGSSC_Orientation_20160802.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Orientation</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>August 02, 2016</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio logo1 mix_all" data-cat="logo" style=" ">
+                            <div class="portfolio-wrapper">
+                                <a href="20160701.html">
+                                <img src="images/IGS_EVENTS/IGSSC_Retreat_20160701_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Annual Summer Retreat (1 July 2016)</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>July 01, 2016</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio app mix_all" data-cat="app" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20160227.html">
+                                <img src="images/IGS_EVENTS/IGSSC_Bonding_20160227_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Student Club Bonding</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>February 27, 2016</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio app mix_all" data-cat="app" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20160318.html">
+                                <img src="images/IGS_EVENTS/IGSSC_archery_20160318_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Student Club Archery</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>March 18, 2016</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio logo1 mix_all" data-cat="logo" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20160224.html">
+                                <img src="images/IGS_EVENTS/IGSSC_DS_20160224_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS-DS</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>February 24, 2016</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio app mix_all" data-cat="app" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20160212.html">
+                                <img src="images/IGS_EVENTS/IGSSC_chinese_new_year_20160212_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Chinese New Year</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>February 12, 2016</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="portfolio app mix_all" data-cat="app" style=" ">
+                            <div class="portfolio-wrapper">
+                                <a href="20160105.html">
+                                <img src="images/IGS_EVENTS/IGSSC_Orientation_20160105_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Team Bonding Activity</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><span><a href="#">January 05, 2016</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio web mix_all" data-cat="web" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20151218.html">
+                                <img src="images/IGS_EVENTS/IGSSC_ChristmasLunch_20151218_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Christmas Lunch</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>December 18, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="portfolio app mix_all" data-cat="app" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20151208.html">
+                                <img src="images/IGS_EVENTS/IGSSC_TeamBounding_20151208_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Team Bounding</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>December 08, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio app mix_all" data-cat="app" style=" ">
+                            <div class="portfolio-wrapper">
+                                <a href="20151114.html">
+                                <img src="images/IGS_EVENTS/IGSSC_Retreat_20151114_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Student Club Retreat</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>November 14, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio app mix_all" data-cat="app" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20150804.html">
+                                <img src="images/IGS_EVENTS/IGSSC_BubbleSoccer_20150804_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Bubble Soccer</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>Augest 04, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio card mix_all" data-cat="card" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20150803.html">
+                                <img src="images/IGS_EVENTS/IGSSC_Orientation_20150803_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Orientation</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>August 03, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio web mix_all" data-cat="web" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="20150806.html">
+                                <img src="images/IGS_EVENTS/IGSSC_SG50_20150806_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS SG50 Celebration</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>August 06, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio web mix_all" data-cat="web" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157652772774320">
+                                <img src="images/IGS_EVENTS/IGSSC_Emergenetics_20150520_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Emergenetics</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>May 20, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio web mix_all" data-cat="web" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157652368020658">
+                                <img src="images/IGS_EVENTS/IGSSC_SEEThailand_20150324_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">SEE Thailand with CU</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>March 24, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio web mix_all" data-cat="web" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157651760169176">
+                                <img src="images/IGS_EVENTS/IGSSC_Eye_20150328_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">Eye Am Aware</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>March 28, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio icon mix_all" data-cat="icon" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157649485141723">
+                                <img src="images/IGS_EVENTS/IGSSC_workshop_20150321_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">Nail Art Workshop</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><span><a href="#">March 21, 2015</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio web mix_all" data-cat="web" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157651205946906">
+                                <img src="images/IGS_EVENTS/IGSSC_CNY_20150226_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS CNY 2015</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><span><a href="#">February 26, 2015</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio card mix_all" data-cat="card" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157650435036656">
+                                <img src="images/IGS_EVENTS/IGSSC_Orientation_20150107_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Orientation</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>January 07, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio app mix_all" data-cat="app" style="  display: inline-block; opacity: 1;">
+                            <div class="portfolio-wrapper">
+                                <a href="https://www.flickr.com/photos/91294949@N02/albums/72157649986845197/with/16331874355/">
+                                <img src="images/IGS_EVENTS/IGSSC_Team_20150110_top.jpg" alt="Image 2">
+                                </a>
+                                <div class="links">
+                                    <h4><a href="">IGS Team Building Activity</a></h4>
+                                    <div class="clear"></div>
+                                    <ul>
+                                        <li><a href="#"><span>January 10, 2015</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="wrap">
+                    <div class="section group">
+                        <div class="col_1_of_3 span_1_of_3">
+                            <h3>About Us</h3>
+                            <p>The IGS Student Club began its activities in January 2013 with a handful of members and has been steadily growing, both in number and activity.</p>
+                            <a href="http://igs.ntu.edu.sg/Pages/Home.aspx"><button class="btn1 btn-8 btn-8b">Learn more</button>
+
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <!-- <h3>Latest tweets</h3>
+                            <div class="footer-list">
+                                <ul>
+                                    <li>
+                                        <img src="images/tw.png" alt=""/>
+                                        <p>Lorem ipsum <span class="yellow"><a href="#">consectetuer</a></span> adipiscing elit, seddia<br><span class="small">&nbsp;web design</span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/tw.png" alt=""/>
+                                        <p>Lorem ipsum <span class="yellow"><a href="#">consectetuer</a></span> adipiscing elit, seddia<br><span class="small">&nbsp;web design</span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/tw.png" alt=""/>
+                                        <p>Lorem ipsum dolor sit amet, <span class="yellow"><a href="#">consectetuer</a></span> adipiscing elit, sed diam nonummy nibh<br><span class="small">&nbsp;web design</span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/tw.png" alt=""/>
+                                        <p>Lorem ipsum dolor sit amet, <span class="yellow"><a href="#">consectetuer</a></span> adipiscing elit, sed diam nonummy nibh<br><span class="small">&nbsp;web design</span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/tw.png" alt=""/>
+                                        <p>Lorem ipsum <span class="yellow"><a href="#">consectetuer</a></span> adipiscing elit, seddia<br><span class="small">&nbsp;web design</span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="social-icons">
+                                <h4>Social Connecting</h4>
+                                <ul>
+                                  <li class="facebook"><a href="#"><span> </span></a></li>
+                                  <li class="google"><a href="#"><span> </span></a></li>
+                                  <li class="twitter"><a href="#"><span> </span></a></li>
+                                  <!-- <li class="linkedin"><a href="#"><span> </span></a></li> -->
+                                  <li class="youtube"><a href="https://www.youtube.com/channel/UCNLyEzruokTI444ALIESEcg"><span> </span></a></li>
+                                  <!-- <li class="bloger"><a href="#"><span> </span></a></li>
+                                  <li class="rss"><a href="#"><span> </span></a></li>
+                                  <li class="dribble"><a href="#"><span> </span></a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <h3>Contact info</h3>
+                            <div class="footer-list">
+                                <ul>
+                                    <li>
+                                        <img src="images/address.png" alt=""/>
+                                        <p>Interdisciplinary Graduate School,<br>&nbsp;50 Nanyang Avenue, Block S2-B3a-01</p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/phone.png" alt=""/>
+                                        <p>Phone: +65 6592 3077</p>
+                                        <div class="clear"></div>
+                                    </li>
+                                    <li>
+                                        <img src="images/msg.png" alt=""/>
+                                        <p>Email: <span class="yellow"><a href="#">IGSstudentclub@ntu.edu.sg</a></span></p>
+                                        <div class="clear"></div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="wrap">
+                    <div class="copy">
+                        <p class="copy">Copyright 2016 <a href="http://www.ntu.edu.sg/Pages/home.aspx" target="_blank"> NANYANG TECHNOLOGICAL UNIVERSITY</a></p>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <!-- <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog</a></li> -->
+                            <li><a href="portfolio.html">Events</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
